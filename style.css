@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background-color: #000;
+}
+.sky {
+  height: 23vh;
+  width: 100%;
+  background-size: cover; /* ya background-size: 100% 100%; */
+  position: absolute;
+  background-image: url(sky.jpg);
+  background-repeat: no-repeat;
+}
+.trees {
+  height: 80vh;
+  width: 100%;
+  background-image: url(car_game_background.jpg);
+  background-size: cover;
+  position: relative;
+}
+.track {
+  position: absolute;
+  top: 80vh;
+  left: 0;
+  width: 300vh;
+  height: 25vh;
+  background-image: url(track2.png);
+  background-size: cover;
+  background-repeat: repeat-x;
+  animation: carMove linear 6s infinite;
+}
+.car {
+  height: 380px;
+  width: 656px;
+  background-image: url(hyundai_creta-removebg-preview.png);
+  background-size: cover;
+  position: absolute;
+  left: 240px;
+  top: 500px;
+  animation: shake linear 4s infinite;
+  /*  animation-direction: alternate;*/
+}
+.wheel1 {
+  position: absolute;
+  left: 121px;
+  top: 30vh;
+}
+.wheel2 {
+  position: absolute;
+  left: 468px;
+  top: 30vh;
+}
+
+.wheel1 img {
+  animation: wheelRotation linear 2s infinite;
+}
+.wheel2 img {
+  animation: wheelRotation linear 2s infinite;
+}
+@keyframes wheelRotation {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes carMove {
+  100% {
+    transform: translateX(-400px);
+  }
+}
+@keyframes shake {
+  0% {
+    transform: translateY(-100px);
+  }
+  50% {
+    transform: translateY(-80px);
+  }
+  100% {
+    transform: translateY(-93px);
+  }
+}
